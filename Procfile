@@ -1,0 +1,1 @@
+application: bundle exec shotgun -p 8000

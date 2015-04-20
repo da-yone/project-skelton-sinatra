@@ -1,0 +1,8 @@
+# idea project file
+.idea
+project-skelton-sinatra.iml
+
+# bundle
+.bundle
+vendor
+Gemfile.lock
