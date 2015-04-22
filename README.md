@@ -10,11 +10,11 @@ This is the web application skelton for Sinatra project.
 ## Usage
 
 ```
-$bundle install
-$npm install
-$npm install -g bower
-$bower install
-$bundle exec foreman start
+bundle install --path vendor/bundle
+npm install
+npm install -g bower
+bower install
+bundle exec foreman start
 ```
 
 ## Licence
