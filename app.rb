@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-set :database_file, 'db/database.yml'
+set :database, { :adapter => 'sqlite3', :database => 'db/app.db' }
 
 class App < Sinatra::Base
 

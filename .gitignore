@@ -3,7 +3,6 @@
 project-skelton-sinatra.iml
 
 # bundle
-.bundle
 vendor
 Gemfile.lock
 
@@ -12,3 +11,6 @@ bower_components
 
 # npm
 node_modules
+
+# db
+db/*.db
