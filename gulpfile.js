@@ -58,8 +58,8 @@ gulp.task('clean', function(){
 gulp.task('build', [ 'browser-sync', 'bower-files', 'js', 'css' ]);
 
 gulp.task('default', [ 'clean', 'build' ], function() {
-    gulp.watch('assets/coffee/*.coffee', ['js']);
-    gulp.watch('assets/sass/*.scss', ['css']);
+    gulp.watch('assets/coffee/*.coffee', ['js', 'browser-sync-reload']);
+    gulp.watch('assets/sass/*.scss', ['css', 'browser-sync-reload']);
     gulp.watch('app.rb', ['browser-sync-reload']);
-    return gulp.watch('views/*.slim', ['browser-sync-reload']);
+    gulp.watch('views/*.slim', ['browser-sync-reload']);
 });
