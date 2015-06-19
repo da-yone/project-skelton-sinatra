@@ -14,12 +14,16 @@ var dest_path_css = './public/css/';
 gulp.task('bower-files', function(){
     var js_filter = gulp_filter('**/*.js');
     var css_filter = gulp_filter('**/*.css');
+    var font_filter = gulp_filter(['**/*.ttf', '**/*.woff', '**/*.woff2']);
     gulp.src(bower_files())
         .pipe(js_filter)
         .pipe(gulp.dest(dest_path_js + 'lib/'))
         .pipe(js_filter.restore())
         .pipe(css_filter)
-        .pipe(gulp.dest(dest_path_css + 'lib/'));
+        .pipe(gulp.dest(dest_path_css + 'lib/'))
+        .pipe(css_filter.restore())
+        .pipe(font_filter)
+        .pipe(gulp.dest(dest_path_css + 'fonts/'))    
 });
 
 gulp.task('css', function(){

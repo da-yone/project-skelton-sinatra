@@ -15,11 +15,5 @@ node_modules
 # db
 db/*.db
 
-# public javascript & stylesheet
-public/css/lib/*.css
-public/css/*.css
-public/js/lib/*.js
-public/js/*.js
-
 # .DS_STORE
 .DS_Store
