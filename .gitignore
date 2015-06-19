@@ -16,4 +16,4 @@ node_modules
 db/*.db
 
 # .DS_STORE
-.DS_STORE
+.DS_Store
