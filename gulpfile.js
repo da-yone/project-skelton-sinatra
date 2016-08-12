@@ -2,7 +2,6 @@
 var gulp = require('gulp');
 var browser_sync = require('browser-sync');
 var gulp_filter = require('gulp-filter');
-var bower_files = require('main-bower-files');
 var sass = require('gulp-sass');
 var coffee = require('gulp-coffee');
 var plumber = require('gulp-plumber');
@@ -23,7 +22,7 @@ gulp.task('bower-files', function(){
         .pipe(gulp.dest(dest_path_css + 'lib/'))
         .pipe(css_filter.restore())
         .pipe(font_filter)
-        .pipe(gulp.dest(dest_path_css + 'fonts/'))    
+        .pipe(gulp.dest(dest_path_css + 'fonts/'))
 });
 
 gulp.task('css', function(){
@@ -59,7 +58,7 @@ gulp.task('clean', function(){
     ]);
 });
 
-gulp.task('build', [ 'browser-sync', 'bower-files', 'js', 'css' ]);
+gulp.task('build', [ 'browser-sync', 'js', 'css' ]);
 
 gulp.task('default', [ 'clean', 'build' ], function() {
     gulp.watch('assets/coffee/*.coffee', ['js', 'browser-sync-reload']);
