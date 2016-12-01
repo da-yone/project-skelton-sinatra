@@ -12,6 +12,7 @@ This is the web application skelton for Sinatra project.
 ```
 bundle install --path vendor/bundle
 npm install
+npm install -g gulp
 bundle exec foreman start
 ```
 
