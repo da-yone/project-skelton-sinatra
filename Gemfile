@@ -7,7 +7,12 @@ gem 'sqlite3'
 gem 'sinatra-activerecord'
 gem 'rake'
 
-group :test do
+group :development do
+  gem 'pry-byebug'
+  gem 'awesome_print'
+end
+
+group :development, :test do
   gem 'shotgun' # ローカルサーバー
   gem 'foreman' # コマンドの一括実行
   gem 'rspec'
